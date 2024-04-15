@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ekz1604_2.MainWindow"
+        Title="КЛИЕНТЫ">
+    <Grid>
+        <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin ="10 10 0 0">Поиск по фамилии:</TextBlock>
+            <TextBox Name="SearchBox" Width="200"  Margin ="10 10 0 0" TextChanged="Search"></TextBox>
+            <Button Name="Back" Margin ="10 10 0 0" Content="Регистрация" Click="back"></Button>
+            
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <DataGrid Name="ClientsGrid" x:CompileBindings="False" Margin ="10 10 0 0" Width="600" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="id" Binding="{Binding id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="surname" Binding="{Binding surname}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="name" Binding="{Binding name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="phone" Binding="{Binding phone}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="login" Binding="{Binding login}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="password" Binding="{Binding password}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="FilterPhone" Margin ="10 10 0 0">Фильтрация по телефону: </TextBlock>
+                <ComboBox Name="CmbPhone" Width="200" Margin ="10 10 0 0" x:CompileBindings="False" SelectionChanged="Cmb_Phone">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding phone}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="id" x:CompileBindings="False" Text="{Binding id}" Width="200" Height="5" Margin = "10 10 0 0"></TextBox>
+                <Button Name="Delete" Margin="10 10 0 0" Content="Удалить" Click="DeleteData"></Button>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+            <ComboBox Margin = "10 10 0 0" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="По возрастанию" />
+                <ComboBoxItem Content="По убыванию" />
+            </ComboBox>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>  
+</Window>

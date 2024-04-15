@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ekz1604_2/App.axaml" value="ekz1604_2/ekz1604_2.csproj" />
+        <entry key="ekz1604_2/MainWindow.axaml" value="ekz1604_2/ekz1604_2.csproj" />
+        <entry key="ekz1604_2/clientsForm.axaml" value="ekz1604_2/ekz1604_2.csproj" />
+        <entry key="ekz1604_2/menu.axaml" value="ekz1604_2/ekz1604_2.csproj" />
+        <entry key="ekz1604_2/registrationForm.axaml" value="ekz1604_2/ekz1604_2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
